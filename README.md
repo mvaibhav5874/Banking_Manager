@@ -73,7 +73,7 @@ Manages **debit/credit transactions** with timestamps.\
 1.  Clone this repository:
 
     ``` bash
-    git clone https://github.com/your-username/Banking-Manager.git
+    git clone [https://github.com/your-username/Banking-Manager](https://github.com/mvaibhav5874/Banking_Manager).git
     ```
 
 2.  Import the SQL script into MySQL:
@@ -113,19 +113,13 @@ Manages **debit/credit transactions** with timestamps.\
 Below is the Entity--Relationship Diagram for the Banking Manager
 system:
 
-![Banking Manager ERD](Banking_Manager_ERD.png)
+![Banking Manager ERD](ER_daigram.png)
 
 ------------------------------------------------------------------------
 
 ## ✅ Outcomes
 
 -   Supports **500+ banking accounts**\
--   Handles **real-time transactions** with **100% accuracy**\
+-   Handles **real-time transactions** with **100% accuracy**
 -   Optimized triggers **minimize server load** during concurrent
     operations
-
-------------------------------------------------------------------------
-
-## 📄 License
-
-This project is released under the **MIT License**.
