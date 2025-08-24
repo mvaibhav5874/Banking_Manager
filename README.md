@@ -16,7 +16,7 @@ bank and account holder records once KYC is approved).
 
 ## 🛠 Tech Stack
 
--   **Database**: MySQL\
+-   **Database**: MySQL
 -   **Features Used**: PL/SQL, Triggers, Constraints, Auto-Increment
     Keys
 
@@ -29,26 +29,26 @@ The project consists of the following core tables:
 ### 1. `tb_account_form`
 
 Stores initial customer application details (name, DOB, Aadhar, balance,
-etc.).\
-- Enforces **KYC validation**\
-- Requires **minimum opening balance of 1000**\
+etc.).
+- Enforces **KYC validation**
+- Requires **minimum opening balance of 1000**
 - Prevents duplicate Aadhar and mobile numbers
 
 ### 2. `tb_bank`
 
-Created automatically once an account is approved.\
+Created automatically once an account is approved.
 - Holds **account type**, **opening date**, and **current balance**
 
 ### 3. `tb_account_holder_details`
 
-Stores approved customer personal details.\
+Stores approved customer personal details.
 - Name, DOB, Aadhar, and Mobile automatically inserted from
 `tb_account_form` after approval
 
 ### 4. `tb_transaction_details`
 
-Manages **debit/credit transactions** with timestamps.\
-- Prevents overdrafts\
+Manages **debit/credit transactions** with timestamps.
+- Prevents overdrafts
 - Automatically updates account balances
 
 ------------------------------------------------------------------------
@@ -59,11 +59,11 @@ Manages **debit/credit transactions** with timestamps.\
     -   Once `KYC_Status = Approved`, triggers insert records into
         `tb_bank` and `tb_account_holder_details`.
 -   **Transaction Handling**
-    -   Debit/Credit transactions update balances in real time.\
+    -   Debit/Credit transactions update balances in real time.
     -   Overdrafts are blocked with validation checks.
 -   **Data Validation & Constraints**
-    -   Unique Aadhar and Mobile numbers\
-    -   Minimum opening balance enforced\
+    -   Unique Aadhar and Mobile numbers
+    -   Minimum opening balance enforced
     -   Allowed account types: `Savings`, `Current`
 
 ------------------------------------------------------------------------
@@ -72,14 +72,14 @@ Manages **debit/credit transactions** with timestamps.\
 
 1.  Clone this repository:
 
-    ``` bash
-    git clone [https://github.com/your-username/Banking-Manager](https://github.com/mvaibhav5874/Banking_Manager).git
+    ``` bash[
+    git clone https://github.com/mvaibhav5874/Banking_Manager.git
     ```
 
 2.  Import the SQL script into MySQL:
 
     ``` bash
-    mysql -u your_username -p < Bank_Management.sql
+    mysql -u mvaibhav5874 -p < Bank_Management.sql
     ```
 
 3.  Select the database:
@@ -100,9 +100,9 @@ Manages **debit/credit transactions** with timestamps.\
 
 ## 📊 Example Workflow
 
-1.  Insert a new customer record into `tb_account_form`.\
+1.  Insert a new customer record into `tb_account_form`.
 2.  Approve KYC → Automatically creates entries in `tb_bank` and
-    `tb_account_holder_details`.\
+    `tb_account_holder_details`.
 3.  Perform debit/credit transactions → Updates balances in `tb_bank`
     with real-time validation.
 
